@@ -6,6 +6,7 @@ package com.pattern.singleton.hungry;
  * @DateTime 2023/10/12 23:21
  */
 public class VirtualUserGenerator {
+	
 	private static final VirtualUserGenerator virtualUserGenerator = new VirtualUserGenerator();
 	private int userCount = 0;
 	
@@ -20,9 +21,8 @@ public class VirtualUserGenerator {
 		return userCount;
 	}
 	
-	public void setUserCount () {
+	public void addUserCount () {
 		this.userCount++;
 	}
-	
 	
 }

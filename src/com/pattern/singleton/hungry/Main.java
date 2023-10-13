@@ -11,7 +11,7 @@ public class Main {
 		for (int i = 0; i < 10; i++) {
 			VirtualUserGenerator instance = VirtualUserGenerator.getInstance();
 			System.out.println(instance);
-			instance.setUserCount();
+			instance.addUserCount();
 		}
 		System.out.println(VirtualUserGenerator.getInstance().getUserCount());
 		/*
