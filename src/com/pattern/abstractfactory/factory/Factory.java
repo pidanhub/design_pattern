@@ -57,7 +57,7 @@ public abstract class Factory {
 		// doSomething
 		if (properties.getProperty(TRANSACTIONAL) != null) {
 			// do something...
-			System.out.println("获取了关于事务的配置信息，并谁知道一处");
+			System.out.println("获取了关于事务的配置信息，并配置到类中");
 			// aClass.getDeclaredFields()...
 		}
 		// if... // 读取其他配置
