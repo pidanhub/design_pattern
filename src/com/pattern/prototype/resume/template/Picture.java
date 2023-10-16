@@ -9,11 +9,4 @@ import java.io.Serializable;
  */
 public class Picture implements Serializable {
 	public String change = "-";
-	
-	@Override
-	public String toString () {
-		return "Picture{" +
-				"change='" + change + '\'' +
-				'}';
-	}
 }

@@ -26,7 +26,8 @@ public class ResumeTemplate implements Cloneable, Serializable {
 		return "ResumeTemplate{" +
 				"name='" + name + '\'' +
 				", picture=" + picture +
-				'}';
+				", picture.context='" + picture.change +
+				"'}";
 	}
 	
 	public void changePhoto (String token) {
