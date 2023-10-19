@@ -26,5 +26,9 @@ public class Main {
 		f = 13.2f;
 		result = startFilter.filtrate(f);
 		System.out.println(Arrays.toString(result));
+		
+		intToBinaryFilter.setNext(null);
+		String re = startFilter.filtrate(f);
+		System.out.println(re);
 	}
 }
