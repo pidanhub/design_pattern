@@ -1,5 +1,6 @@
-package com.pattern.bridge.app.filter;
+package com.pattern.bridge.app;
 
+import com.pattern.bridge.app.filter.Filter;
 import com.pattern.bridge.app.format.ImageFormat;
 
 /*

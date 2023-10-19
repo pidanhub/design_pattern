@@ -34,6 +34,4 @@ public class Table {
 	public String toString () {
 		return context;
 	}
-	
-	
 }

@@ -1,8 +1,8 @@
 package com.pattern.bridge;
 
+import com.pattern.bridge.app.Photo;
 import com.pattern.bridge.app.filter.BlurFilter;
 import com.pattern.bridge.app.filter.Filter;
-import com.pattern.bridge.app.filter.Photo;
 import com.pattern.bridge.app.filter.SharpenFilter;
 import com.pattern.bridge.app.format.ImageFormat;
 import com.pattern.bridge.app.format.JPGFormat;
