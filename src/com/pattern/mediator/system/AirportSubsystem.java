@@ -12,12 +12,15 @@ import java.util.HashSet;
 public class AirportSubsystem extends SubSystem {
 	private static final AirportSubsystem airportSubsystem = new AirportSubsystem();
 	
+	static {
+		airportSubsystem.messageSet = new HashSet<>();
+		airportSubsystem.mediator = new MediatorImpl();
+	}
+	
 	private AirportSubsystem () {
 	}
 	
 	public static AirportSubsystem getInstance () {
-		airportSubsystem.messageSet = new HashSet<>();
-		airportSubsystem.mediator = new MediatorImpl();
 		return airportSubsystem;
 	}
 }

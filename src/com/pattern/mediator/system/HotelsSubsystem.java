@@ -12,12 +12,15 @@ import java.util.HashSet;
 public class HotelsSubsystem extends SubSystem {
 	private static final HotelsSubsystem hotelsSubsystem = new HotelsSubsystem();
 	
+	static {
+		hotelsSubsystem.messageSet = new HashSet<>();
+		hotelsSubsystem.mediator = new MediatorImpl();
+	}
+	
 	private HotelsSubsystem () {
 	}
 	
 	public static HotelsSubsystem getInstance () {
-		hotelsSubsystem.messageSet = new HashSet<>();
-		hotelsSubsystem.mediator = new MediatorImpl();
 		return hotelsSubsystem;
 	}
 }

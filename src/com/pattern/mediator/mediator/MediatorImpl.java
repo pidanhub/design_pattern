@@ -33,8 +33,8 @@ public class MediatorImpl implements Mediator {
 	public void share (String message, SubSystem system) {
 		if (systemSet.contains(system)) {
 			for (SubSystem others : systemSet) {
-				if (others != system && !others.getMessageSet().contains(message))
-					others.acceptMessage(message);
+				if (others != system)
+					others.mediatorShared(message);
 			}
 		}
 	}

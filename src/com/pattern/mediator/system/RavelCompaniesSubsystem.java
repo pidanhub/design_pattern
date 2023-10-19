@@ -12,12 +12,15 @@ import java.util.HashSet;
 public class RavelCompaniesSubsystem extends SubSystem {
 	private static final RavelCompaniesSubsystem ravelCompaniesSubsystem = new RavelCompaniesSubsystem();
 	
+	static {
+		ravelCompaniesSubsystem.messageSet = new HashSet<>();
+		ravelCompaniesSubsystem.mediator = new MediatorImpl();
+	}
+	
 	private RavelCompaniesSubsystem () {
 	}
 	
 	public static RavelCompaniesSubsystem getInstance () {
-		ravelCompaniesSubsystem.messageSet = new HashSet<>();
-		ravelCompaniesSubsystem.mediator = new MediatorImpl();
 		return ravelCompaniesSubsystem;
 	}
 }

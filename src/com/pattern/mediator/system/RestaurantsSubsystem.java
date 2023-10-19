@@ -12,12 +12,15 @@ import java.util.HashSet;
 public class RestaurantsSubsystem extends SubSystem {
 	private static final RestaurantsSubsystem restaurantsSubsystem = new RestaurantsSubsystem();
 	
+	static {
+		restaurantsSubsystem.messageSet = new HashSet<>();
+		restaurantsSubsystem.mediator = new MediatorImpl();
+	}
+	
 	private RestaurantsSubsystem () {
 	}
 	
 	public static RestaurantsSubsystem getInstance () {
-		restaurantsSubsystem.messageSet = new HashSet<>();
-		restaurantsSubsystem.mediator = new MediatorImpl();
 		return restaurantsSubsystem;
 	}
 }

@@ -12,12 +12,15 @@ import java.util.HashSet;
 public class TourismAttractionsSubsystem extends SubSystem {
 	private static final TourismAttractionsSubsystem tourismAttractionsSubsystem = new TourismAttractionsSubsystem();
 	
+	static {
+		tourismAttractionsSubsystem.messageSet = new HashSet<>();
+		tourismAttractionsSubsystem.mediator = new MediatorImpl();
+	}
+	
 	private TourismAttractionsSubsystem () {
 	}
 	
 	public static TourismAttractionsSubsystem getInstance () {
-		tourismAttractionsSubsystem.messageSet = new HashSet<>();
-		tourismAttractionsSubsystem.mediator = new MediatorImpl();
 		return tourismAttractionsSubsystem;
 	}
 }

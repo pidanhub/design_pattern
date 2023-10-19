@@ -16,11 +16,16 @@ public abstract class SubSystem {
 	
 	public void acceptMessage (String message) {
 		messageSet.add(message);
+		// 通知中介去广播
 		mediator.share(message, this);
 	}
 	
 	public String getMessageSet () {
 		return messageSet.toString();
+	}
+	
+	public void mediatorShared (String message) {
+		messageSet.add(message);
 	}
 	
 }
