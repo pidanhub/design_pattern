@@ -12,6 +12,6 @@ public class FloatToIntFilter extends DataFilter {
 		if (!(o instanceof Float))
 			throw new IllegalArgumentException();
 		int i = (int) (float) o;
-		return hasNext() ? nextFilter.filtrate((int) (float) o) : (T) (Integer) i;
+		return hasNext() ? nextFilter.filtrate(i) : (T) (Integer) i;
 	}
 }
