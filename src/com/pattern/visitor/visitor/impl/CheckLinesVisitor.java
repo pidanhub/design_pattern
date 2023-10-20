@@ -37,11 +37,12 @@ public class CheckLinesVisitor implements CodeReviewVisitor {
 					// 防止有人在一行内写"块注释"
 					--i;
 					blockAnnotationFlag = !read.contains("*/");
-					if (read.contains("/*") && !read.trim().startsWith("/*")) ++i;
-					if (read.matches(".*(/*).*(\\*/).*")) {
-						blockAnnotationFlag = false;
-					}
+					if ((read.contains("/*") && !read.trim().startsWith("/*")) || read.contains("*/") && !read.trim().endsWith("*/"))
+						++i;
+					if (read.matches(".*(/*).*(\\*/).*")) blockAnnotationFlag = false;
 				}
+				else System.out.println(read);
+				System.out.println(i);
 			}
 			System.out.println("源代码行数：" + i);
 		} catch (IOException e) {
