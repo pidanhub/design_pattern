@@ -17,13 +17,17 @@ public class Test {
 	public final static String TEST_UNDERLINE = "_";
 	
 	static {
-		new Test().accept(new SoftwareScaleVisitor());
-		new Test().accept(new NameStandardVisitor());
-		new Test().accept(new CheckLinesVisitor());
+		new Test().accept(
+				new SoftwareScaleVisitor(),
+				new NameStandardVisitor(),
+				new CheckLinesVisitor()
+		);
 	}
 	
-	public void accept (CodeReviewVisitor visitor) {
-		visitor.visit(this.getClass());
+	public void accept (CodeReviewVisitor... visitors) {
+		for (CodeReviewVisitor visitor : visitors) {
+			visitor.visit(this.getClass());
+		}
 	}
 	
 	public void test (String s, Integer i, Float f, Map<Class<?>, Object> m) {
