@@ -12,7 +12,7 @@ import java.awt.event.WindowEvent;
  */
 public class MyWPSFrame extends Frame {
 	private final TextArea textArea;
-	
+	private final Memento memento = Memento.getInstance();
 	public MyWPSFrame () {
 		setTitle("WPS Office");
 		setBounds(100, 100, 888, 500);
@@ -44,7 +44,6 @@ public class MyWPSFrame extends Frame {
 		add(undo);
 		add(redo);
 		
-		final Memento memento = Memento.getInstance();
 		record.addActionListener((ActionEvent e) -> {
 			memento.createMemento(textArea.getText());
 			// 添加了备忘录以后就可以执行撤销操作
