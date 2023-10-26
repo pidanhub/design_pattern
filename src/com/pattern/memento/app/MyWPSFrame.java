@@ -7,7 +7,7 @@ import java.awt.event.WindowEvent;
 
 /*
  * @Author Zzs
- * @Description 这个是界面类，里面会聚合三个观察者。
+ * @Description
  * @DateTime 2023/10/25 0:23
  */
 public class MyWPSFrame extends Frame {
