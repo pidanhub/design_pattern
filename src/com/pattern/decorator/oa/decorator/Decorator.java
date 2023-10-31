@@ -7,10 +7,11 @@ import com.pattern.decorator.oa.Table;
  * @Description
  * @DateTime 2023/10/19 16:55
  */
-public abstract class Decorator {
+public abstract class Decorator extends Table {
 	protected Table table;
 	
 	public Decorator (Table table) {
+		super();
 		this.table = table;
 	}
 	

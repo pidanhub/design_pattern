@@ -14,6 +14,9 @@ public class Table {
 		nextDecorateLength = context.length();
 	}
 	
+	public Table () {
+	}
+	
 	public int getNextDecorateLength () {
 		return nextDecorateLength;
 	}
